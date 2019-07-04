@@ -1,7 +1,8 @@
 # 156-modul-datenweitergabe-versandunternehmen
-Datenweitergabe an Versandunternehmen für Zen Cart 1.5.6 deutsch
+Einwilligung in Datenweitergabe an Versandunternehmen für Zen Cart 1.5.6 deutsch
 
 Die IT Recht Kanzlei schreibt für die Weitergabe der Emailadresse des Kunden an ein Versandunternehmen folgendes vor:
+
 Sie dürfen die vom Kunden erhobene E-Mail-Adresse nur dann an einen Dritten (hier DHL) weitergeben, wenn Sie die ausdrückliche Einwilligung des betroffenen Kunden in die Weitergabe seiner E-Mail-Adresse eingeholt haben!
 Diese Einwilligung des Kunden kann durch einen entsprechenden Erklärungstext bewerkstelligt werden, den der Kunde im Verlauf des Bestellprozesses in Ihrem Online-Shop durch Setzen eines Häkchens mittels Opt-In Checkbox ausdrücklich bestätigt.
 Bitte fügen Sie daher im Bestellvorgang folgenden Einwilligungstext (inkl. Check- Box) ein:
