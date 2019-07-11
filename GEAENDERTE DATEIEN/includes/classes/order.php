@@ -6,7 +6,7 @@
  * @package classes
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: order.php for Datenweitergabe an Versandunternehmen 2019-07-04 09:20:25Z webchills $
+ * @version $Id: order.php for Datenweitergabe an Versandunternehmen 2019-07-11 16:20:25Z webchills $
  */
 /**
  * order class
@@ -83,9 +83,9 @@ class order extends base {
                 where coupon_code ='" . $order->fields['coupon_code'] . "'";
         $coupon_link = $db->Execute($coupon_link_query);
         if (IS_ADMIN_FLAG === true) {
-                $zc_coupon_link = '<a href="javascript:couponpopupWindow(\'' . zen_href_link(FILENAME_POPUP_COUPON_HELP, 'cID=' . $coupon_link->fields['coupon_id']) . '\')">';
-        } else {
-          $zc_coupon_link = $coupon_link->fields['coupon_id'];
+          $zc_coupon_link = '<a href="javascript:couponpopupWindow(\'' . zen_catalog_href_link(FILENAME_POPUP_COUPON_HELP, 'cID=' . $coupon_link->fields['coupon_id']) . '\')">';
+        } else { 
+          $zc_coupon_link = '<a href="javascript:couponpopupWindow(\'' . zen_href_link(FILENAME_POPUP_COUPON_HELP, 'cID=' . $coupon_link->fields['coupon_id']) . '\')">';
         }
       }
       $this->totals[] = array('title' => ($totals->fields['class'] == 'ot_coupon' ? $zc_coupon_link . $totals->fields['title'] . '</a>' : $totals->fields['title']),
@@ -1194,7 +1194,7 @@ class order extends base {
   } 
   // EOF pdf Rechnung
     zen_mail($this->customer['firstname'] . ' ' . $this->customer['lastname'], $this->customer['email_address'], EMAIL_TEXT_SUBJECT . EMAIL_ORDER_NUMBER_SUBJECT . $zf_insert_id, $email_order, STORE_NAME, EMAIL_FROM, $html_msg, 'checkout', $this->attachArray);
-   
+
     
     // send additional emails
     if (SEND_EXTRA_ORDER_EMAILS_TO != '') {
