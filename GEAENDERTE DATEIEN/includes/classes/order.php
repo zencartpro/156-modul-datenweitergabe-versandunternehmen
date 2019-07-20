@@ -5,8 +5,8 @@
  *
  * @package classes
  * @copyright Copyright 2003-2019 Zen Cart Development Team
- * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: order.php for Datenweitergabe an Versandunternehmen 2019-07-11 16:20:25Z webchills $
+ * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
+ * @version $Id: order.php for Datenweitergabe an Versandunternehmen 2019-07-20 16:20:25Z webchills $
  */
 /**
  * order class

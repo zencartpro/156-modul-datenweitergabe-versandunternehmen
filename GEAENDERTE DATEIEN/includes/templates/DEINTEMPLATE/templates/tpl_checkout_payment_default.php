@@ -8,8 +8,8 @@
  * @package templateSystem
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
- * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: tpl_checkout_payment_default.php for Datenweitergabe an Transportunternehmen 2019-07-04 11:01:42Z webchills $
+ * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
+ * @version $Id: tpl_checkout_payment_default.php for Datenweitergabe an Transportunternehmen 2019-07-20 16:01:42Z webchills $
  */
 ?>
 <?php echo $payment_modules->javascript_validation(); ?>
