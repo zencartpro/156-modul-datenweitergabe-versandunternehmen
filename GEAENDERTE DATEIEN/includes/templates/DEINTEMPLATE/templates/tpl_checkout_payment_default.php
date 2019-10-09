@@ -9,7 +9,7 @@
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_checkout_payment_default.php for Datenweitergabe an Transportunternehmen 2019-07-20 16:01:42Z webchills $
+ * @version $Id: tpl_checkout_payment_default.php for Datenweitergabe an Transportunternehmen 2019-10-09 08:42:42Z webchills $
  */
 ?>
 <?php echo $payment_modules->javascript_validation(); ?>
@@ -203,7 +203,7 @@
 <?php
   }
 ?>
-<?php if (isset($_SESSION['shipping']['id']) && $_SESSION['shipping']['id'] == 'free_free') { ?>      
+<?php if (isset($_SESSION['shipping']['id']) && $_SESSION['cart']->get_content_type() == 'virtual') { ?>      
 <?php  } else { ?>
 <fieldset>
 <legend><?php echo TABLE_HEADING_CARRIER; ?></legend>
