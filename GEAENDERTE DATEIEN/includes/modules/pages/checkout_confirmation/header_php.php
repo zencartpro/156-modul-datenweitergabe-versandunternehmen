@@ -6,7 +6,7 @@
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: header_php.php for Datenweitergabe an Versandunternehmen 2019-10-09 08:43:16Z webchills $
+ * @version $Id: header_php.php for Datenweitergabe an Versandunternehmen 2019-11-08 19:05:16Z webchills $
  */
 
 // This should be first line of the script:
@@ -59,7 +59,7 @@ if (DISPLAY_CONDITIONS_ON_CHECKOUT == 'true') {
   }
 }
 
-if ($_SESSION['cart']->get_content_type() == 'virtual') {
+if (($_SESSION['cart']->get_content_type() == 'virtual') || (bool)preg_match('#storepickup#i', $_SESSION['shipping']['id'])) {
       //
       } else {
   if (!isset($_POST['carrier']))  {

@@ -9,7 +9,7 @@
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_checkout_payment_default.php for Datenweitergabe an Transportunternehmen 2019-10-09 08:42:42Z webchills $
+ * @version $Id: tpl_checkout_payment_default.php for Datenweitergabe an Transportunternehmen 2019-11-08 19:42:42Z webchills $
  */
 ?>
 <?php echo $payment_modules->javascript_validation(); ?>
@@ -38,6 +38,7 @@
 
 <div class="floatingBox important forward"><?php echo TEXT_SELECTED_BILLING_DESTINATION; ?></div>
 <br class="clearBoth" />
+<br />
 <?php // ** BEGIN PAYPAL EXPRESS CHECKOUT **
       }
       // ** END PAYPAL EXPRESS CHECKOUT ** ?>
@@ -203,7 +204,7 @@
 <?php
   }
 ?>
-<?php if (isset($_SESSION['shipping']['id']) && $_SESSION['cart']->get_content_type() == 'virtual') { ?>      
+<?php if ((isset($_SESSION['shipping']['id']) && $_SESSION['cart']->get_content_type() == 'virtual') || (bool)preg_match('#storepickup#i', $_SESSION['shipping']['id'])) { ?>      
 <?php  } else { ?>
 <fieldset>
 <legend><?php echo TABLE_HEADING_CARRIER; ?></legend>
