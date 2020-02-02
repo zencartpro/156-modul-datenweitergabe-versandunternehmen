@@ -5,7 +5,7 @@
  * @copyright Copyright 2003-2020 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: german.php for Datenweitergabe an Versandunternehmen 2020-01-16 21:03:57Z webchills $
+ * @version $Id: german.php for Datenweitergabe an Versandunternehmen 2020-02-02 12:03:57Z webchills $
  */
 
 // FOLLOWING WERE moved to meta_tags.php

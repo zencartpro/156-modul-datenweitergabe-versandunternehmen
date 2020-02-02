@@ -1,4 +1,4 @@
-===== Einwilligung in Datenweitergabe an Versandunternehmen 1.1.2 fuer Zen Cart 1.5.6 deutsch ===
+===== Einwilligung in Datenweitergabe an Versandunternehmen 1.2.0 fuer Zen Cart 1.5.6 deutsch ===
 
 Die IT Recht Kanzlei schreibt für die Weitergabe der Emailadresse des Kunden an ein Versandunternehmen folgendes vor:
 Sie dürfen die vom Kunden erhobene E-Mail-Adresse nur dann an einen Dritten (hier DHL) weitergeben, wenn Sie die ausdrückliche Einwilligung des betroffenen Kunden in die Weitergabe seiner E-Mail-Adresse eingeholt haben!
@@ -11,7 +11,19 @@ Dieses Modul integriert diese Einwilligungscheckbox auf der checkout_payment Sei
 Ob der Kunde der Datenweitergabe zugestimmt hat, wird bei der jeweiligen Bestellung in der Administration angezeigt.
 
 
+================= WICHTIG =====================
+Bevor Sie Ihren 1.5.6 Shop weiter modifizieren, stellen Sie erst sicher, dass Sie die neueste 1.5.6 Version verwenden.
+Das ist derzeit 1.5.6e
+Sollten Sie noch 1.5.6d oer 1.5.6c verwenden, aktualisieren Sie Ihren Shop zunächst auf 1.5.6e, bevor Sie dieses Modul installieren.
+Die mitgelieferten GEAENDERTEN DATEIEN dieses Moduls sind auf dem Stand von 1.5.6e
+=================================================
+
+
 Changelog:
+
+1.2.0
+2020-02-02
+Fixes und Codeänderungen aus 1.5.6e integriert
 
 1.1.2
 2019-11-08
@@ -56,7 +68,7 @@ Im Ordner GEAENDERTE DATEIEN den Ordner DEINADMIN auf den Namen Ihres Adminverze
 Alle Ordner namens DEINTEMPLATE auf den Namen des im Shop aktiven Templates umbenennen.
 Im Ordner GEAENDERTE DATEIEN dieses Downloads befinden die für dieses Modul notwendigen geänderten Originaldateien.
 Es wird dringend empfohlen, die bestehenden Orginaldateien nicht einfach zu überschreiben!
-Machen Sie das nur, wenn Sie Zen Cart 1.5.6 gerade neu installiert haben und noch keine Änderungen an Originaldateien vorgenommen haben.
+Machen Sie das nur, wenn Sie Zen Cart 1.5.6e gerade neu installiert haben und noch keine Änderungen an Originaldateien vorgenommen haben.
 Stattdessen vergleichen Sie Ihre entsprechenden Originaldateien mit einem geeigneten Programm wie z.B. WinMerge oder Beyond Compare und nehmen die Änderungen manuell vor.
 
 Der Text, der auf der checkout_payment Seite erscheint, kann nach Belieben auf das jeweils passende Versandunternehmen abgewandelt werden in der includes/languages/german/DEINTEMPLATE/checkout_payment.php
