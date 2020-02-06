@@ -1,6 +1,10 @@
 # 156-modul-datenweitergabe-versandunternehmen
 Einwilligung in Datenweitergabe an Versandunternehmen für Zen Cart 1.5.6 deutsch
 
+Hinweis: 
+Freigegebene getestete Versionen für den Einsatz in Livesystemen ausschließlich unter Releases herunterladen:
+https://github.com/zencartpro/156-modul-datenweitergabe-versandunternehmen/releases
+
 Die IT Recht Kanzlei schreibt für die Weitergabe der Emailadresse des Kunden an ein Versandunternehmen folgendes vor:
 
 Sie dürfen die vom Kunden erhobene E-Mail-Adresse nur dann an einen Dritten (hier DHL) weitergeben, wenn Sie die ausdrückliche Einwilligung des betroffenen Kunden in die Weitergabe seiner E-Mail-Adresse eingeholt haben!
