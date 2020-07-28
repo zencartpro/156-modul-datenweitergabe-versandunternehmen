@@ -5,7 +5,7 @@
  * @copyright Copyright 2003-2020 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: orders.php for Datenweitergabe an Versandunternehmen 2020-07-24 15:58:51Z webchills $
+ * @version $Id: orders.php for Datenweitergabe an Versandunternehmen 2020-07-28 15:50:51Z webchills $
  */
 require('includes/application_top.php');
 
@@ -902,7 +902,7 @@ if (zen_not_null($action) && $order_exists == true) {
                       $new_table = '';
                     }
                   } // eof: search orders or orders_products
-                  $new_fields .= ", o.customers_company, o.customers_email_address, o.customers_street_address, o.delivery_company, o.delivery_name, o.delivery_street_address, o.billing_company, o.billing_name, o.billing_street_address, o.payment_module_code, o.shipping_module_code ";
+                  $new_fields .= ", o.customers_company, o.customers_email_address, o.customers_street_address, o.delivery_company, o.delivery_name, o.delivery_street_address, o.billing_company, o.billing_name, o.billing_street_address, o.payment_module_code, o.shipping_module_code, o.carrier ";
 
                   $orders_query_raw = "select " . $search_distinct . " o.orders_id, o.customers_id, o.customers_name, o.payment_method, o.shipping_method, o.date_purchased, o.last_modified, o.currency, o.currency_value, o.order_device, s.orders_status_name, ot.text as order_total" .
                       $new_fields . "

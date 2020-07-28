@@ -309,7 +309,7 @@ class order extends base {
                                    left join " . TABLE_ZONES . " z on (ab.entry_zone_id = z.zone_id)
                                    left join " . TABLE_COUNTRIES . " c on (ab.entry_country_id = c.countries_id)
                                    left join " . TABLE_COUNTRIES_NAME . " con on (ab.entry_country_id = con.countries_id)
-                                   where ab.customers_id = " . (!empty($_SESSION['customer_id']) ? (int)$_SESSION['customer_id'] : 0) . "                                   
+                                   where ab.customers_id = " . (!empty($_SESSION['customer_id']) ? (int)$_SESSION['customer_id'] : 0) . "
                                    and ab.address_book_id = " . (!empty($_SESSION['sendto']) ? (int)$_SESSION['sendto'] : 0) . "
                                    and con.language_id = '" . (int)$_SESSION['languages_id'] . "'";
 
@@ -418,7 +418,7 @@ class order extends base {
 
     if ($customer_address->RecordCount() > 0) {
       $this->customer = array('gender' => $customer_address->fields['customers_gender'],
-	                          'firstname' => $customer_address->fields['customers_firstname'],
+	                       'firstname' => $customer_address->fields['customers_firstname'],
                               'lastname' => $customer_address->fields['customers_lastname'],
                               'company' => $customer_address->fields['entry_company'],
                               'street_address' => $customer_address->fields['entry_street_address'],
@@ -445,10 +445,10 @@ class order extends base {
         'state' => '',
         'zone_id' => 0,
         'country' => array(
-        'id' => 0, 
-        'title' => '', 
-        'iso_code_2' => '', 
-        'iso_code_3' => ''
+            'id' => 0, 
+            'title' => '', 
+            'iso_code_2' => '', 
+            'iso_code_3' => ''
         ),
         'country_id' => 0,
         'format_id' => 0
@@ -593,6 +593,7 @@ class order extends base {
          * Calculate taxes for this product
          *********************************************/
 		if (DISPLAY_PRICE_WITH_TAX == 'true') {
+			
 			// rundungskorrektur 
         $dest_country = isset ($shipping_address->fields['country']['iso_code_2']) ? $shipping_address->fields['country']['iso_code_2'] : 0 ;
         $dest_zone = 0;
@@ -609,6 +610,7 @@ class order extends base {
         + zen_add_tax($this->products[$index]['onetime_charges'], $this->products[$index]['tax']);        
         $this->info['subtotal'] += $currencies->value($shown_price)* $this->products[$index]['qty'];
         }	
+      
 		} else {
 		$shown_price = (zen_add_tax($this->products[$index]['final_price'] * $this->products[$index]['qty'], $this->products[$index]['tax']))
         + zen_add_tax($this->products[$index]['onetime_charges'], $this->products[$index]['tax']);
@@ -681,6 +683,7 @@ class order extends base {
     if (isset($_SESSION['shipping']['id']) && $_SESSION['shipping']['id'] == 'free_free') {
       $this->info['shipping_module_code'] = $_SESSION['shipping']['id'];
     }
+
     // Sanitize cc-num if present, using maximum 10 chars, with middle chars stripped out with XX
     if (isset($this->info['cc_number']) && strlen($this->info['cc_number']) > 10) {
       $cEnd = substr($this->info['cc_number'], -4);
@@ -1077,6 +1080,7 @@ class order extends base {
     EMAIL_TEXT_ORDER_NUMBER . ' ' . $zf_insert_id . "\n" .
     EMAIL_TEXT_DATE_ORDERED . ' ' . strftime(DATE_FORMAT_LONG) . "\n" .
     EMAIL_TEXT_INVOICE_URL . ' ' . zen_href_link(FILENAME_ACCOUNT_HISTORY_INFO, 'order_id=' . $zf_insert_id, 'SSL', false) . "\n\n";
+
     $html_msg['EMAIL_TEXT_HEADER']     = EMAIL_TEXT_HEADER;
     $html_msg['EMAIL_TEXT_FROM']       = EMAIL_TEXT_FROM;
     $html_msg['INTRO_STORE_NAME']      = STORE_NAME;
@@ -1088,7 +1092,6 @@ class order extends base {
     $html_msg['INTRO_DATE_ORDERED']    = strftime(DATE_FORMAT_LONG);
     $html_msg['INTRO_URL_TEXT']        = EMAIL_TEXT_INVOICE_URL_CLICK;
     $html_msg['INTRO_URL_VALUE']       = zen_href_link(FILENAME_ACCOUNT_HISTORY_INFO, 'order_id=' . $zf_insert_id, 'SSL', false);
-
     $html_msg['EMAIL_CUSTOMER_PHONE']  = $this->customer['telephone'];
     $html_msg['EMAIL_ORDER_DATE']      = date(ORDER_EMAIL_DATE_FORMAT);
     $html_msg['EMAIL_TEXT_TELEPHONE']  = EMAIL_TEXT_TELEPHONE;
