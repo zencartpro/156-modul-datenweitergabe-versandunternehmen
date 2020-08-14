@@ -6,7 +6,7 @@
  * @package classes
  * @copyright Copyright 2003-2020 Zen Cart Development Team
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: order.php for Datenweitergabe an Versandunternehmen 2020-07-24 16:25:25Z webchills $
+ * @version $Id: order.php for Datenweitergabe an Versandunternehmen 2020-08-14 17:05:25Z webchills $
  */
 /**
  * order class
@@ -412,7 +412,7 @@ class order extends base {
                         'total' => 0,
                         'tax_groups' => array(),
                         'comments' => (isset($_SESSION['comments']) ? $_SESSION['comments'] : ''),
-                        'carrier' => (isset($_SESSION['carrier']) ? $_SESSION['carrier'] : '')
+                        'carrier' => (isset($_SESSION['carrier']) ? $_SESSION['carrier'] : 'nein')
                         );
 
 
