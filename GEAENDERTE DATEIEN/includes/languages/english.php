@@ -2,10 +2,10 @@
 /**
  * Zen Cart German Specific
  * @package languageDefines
- * @copyright Copyright 2003-2020 Zen Cart Development Team
+ * @copyright Copyright 2003-2021 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: english.php for Datenweitergabe 2020-07-24 16:33:32Z webchills $
+ * @version $Id: english.php for Datenweitergabe 2021-06-21 15:33:32Z webchills $
  */
 
 // FOLLOWING WERE moved to meta_tags.php
@@ -350,6 +350,7 @@ define('HTML_PARAMS','dir="ltr" lang="en"');
 
   define('TABLE_HEADING_CREDIT_PAYMENT', 'Credits Available');
 
+  define('TEXT_COUPON_LINK_TITLE', 'see the Coupon conditions');
   define('TEXT_INVALID_REDEEM_COUPON', 'Invalid Coupon Code');
   define('TEXT_INVALID_REDEEM_COUPON_MINIMUM', 'You must spend at least %s to redeem this coupon');
   define('TEXT_INVALID_STARTDATE_COUPON', 'This coupon is not available yet');

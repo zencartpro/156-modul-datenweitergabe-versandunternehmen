@@ -2,10 +2,10 @@
 /**
  * Zen Cart German Specific
  * @package languageDefines
- * @copyright Copyright 2003-2020 Zen Cart Development Team
+ * @copyright Copyright 2003-2021 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: german.php for Datenweitergabe an Versandunternehmen 2020-07-24 12:03:57Z webchills $
+ * @version $Id: german.php for Datenweitergabe an Versandunternehmen 2021-06-21 15:03:57Z webchills $
  */
 
 // FOLLOWING WERE moved to meta_tags.php
@@ -356,7 +356,7 @@ define('PAYMENT_METHOD_GV', 'Geschenkgutschein /Aktionskupon');
 define('PAYMENT_MODULE_GV', 'GS/AK');
 
 define('TABLE_HEADING_CREDIT_PAYMENT', 'Guthaben verfügbar');
-
+define('TEXT_COUPON_LINK_TITLE', 'siehe Aktionskupon Bedingungen');
 define('TEXT_INVALID_REDEEM_COUPON', 'Ungültiger Aktionscode');
 define('TEXT_INVALID_REDEEM_COUPON_MINIMUM', 'Der Mindestbestellwert für diesen Aktionskupon liegt bei %s');
 define('TEXT_INVALID_STARTDATE_COUPON', 'Dieser Aktionskupon ist zurzeit nicht verfügbar');
